@@ -129,7 +129,7 @@ export default function Leases() {
                                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-xs)' }}>
                                         <DollarSign size={14} style={{ color: 'hsl(var(--success))' }} />
                                         <span style={{ fontWeight: 600, color: 'hsl(var(--text-primary))', fontSize: '0.9rem' }}>
-                                            {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(lease.total_amount)}
+                                            K{Number(lease.total_amount).toLocaleString()}
                                         </span>
                                     </div>
                                 </td>
@@ -188,7 +188,7 @@ export default function Leases() {
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-md)' }}>
                         <div>
                             <label style={labelStyle}>Total Amount</label>
-                            <input type="number" required value={formData.total_amount} onChange={e => setFormData({ ...formData, total_amount: e.target.value })} placeholder="$" />
+                            <input type="number" required value={formData.total_amount} onChange={e => setFormData({ ...formData, total_amount: e.target.value })} placeholder="K" />
                         </div>
                         <div>
                             <label style={labelStyle}>Status</label>

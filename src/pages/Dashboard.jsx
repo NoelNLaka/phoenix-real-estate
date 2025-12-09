@@ -34,7 +34,7 @@ export default function Dashboard() {
         { label: 'Total Properties', value: stats.properties, icon: Building, color: 'hsl(var(--primary))' },
         { label: 'Total Clients', value: stats.clients, icon: Users, color: 'hsl(210, 100%, 50%)' },
         { label: 'Active Leases', value: stats.activeLeases, icon: FileText, color: 'hsl(var(--success))' },
-        { label: 'Total Revenue', value: `$${stats.revenue.toLocaleString()}`, icon: DollarSign, color: 'hsl(var(--warning))' },
+        { label: 'Total Revenue', value: `K${stats.revenue.toLocaleString()}`, icon: DollarSign, color: 'hsl(var(--warning))' },
     ]
 
     return (

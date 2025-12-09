@@ -92,7 +92,7 @@ export default function Properties() {
                                 </td>
                                 <td>
                                     <span style={{ fontWeight: 600, color: 'hsl(var(--text-primary))', fontSize: '0.9rem' }}>
-                                        {new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(property.price)}
+                                        K{Number(property.price).toLocaleString()}
                                         <span style={{ fontSize: '0.75rem', color: 'hsl(var(--text-muted))', fontWeight: 400 }}>/mo</span>
                                     </span>
                                 </td>
@@ -139,7 +139,7 @@ export default function Properties() {
                         </div>
                         <div>
                             <label style={labelStyle}>Price</label>
-                            <input type="number" required value={formData.price} onChange={e => setFormData({ ...formData, price: e.target.value })} placeholder="$" />
+                            <input type="number" required value={formData.price} onChange={e => setFormData({ ...formData, price: e.target.value })} placeholder="K" />
                         </div>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 'var(--space-md)' }}>
